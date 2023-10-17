@@ -8,6 +8,7 @@ import MuiSelect from './components/MuiSelect';
 import MuiRadioButton from './components/MuiRadioButton';
 import MuiCheckbox from './components/MuiCheckbox';
 import MuiSwitch from './components/MuiSwitch';
+import MuiRating from './components/MuiRating';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <button><Link to="/MuiRadioButton">MuiRadioButton</Link></button>&nbsp;&nbsp;
         <button><Link to="/MuiCheckbox">MuiCheckbox</Link></button>&nbsp;&nbsp;
         <button><Link to="/MuiSwitch">MuiSwitch</Link></button>&nbsp;&nbsp;
+        <button><Link to="/MuiRating">MuiRating</Link></button>&nbsp;&nbsp;
 
         <Routes>
           <Route path="/MuiTypography" element={<MuiTypography />} />
@@ -30,6 +32,7 @@ function App() {
           <Route path="/MuiRadioButton" element={<MuiRadioButton />} />
           <Route path="/MuiCheckbox" element={<MuiCheckbox />} />
           <Route path="/MuiSwitch" element={<MuiSwitch />} />
+          <Route path="/MuiRating" element={<MuiRating />} />
         </Routes>
       </BrowserRouter>
     </div>
