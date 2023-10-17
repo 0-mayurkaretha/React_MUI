@@ -6,6 +6,7 @@ import MuiButton from './components/MuiButton';
 import MuiTextField from './components/MuiTextField';
 import MuiSelect from './components/MuiSelect';
 import MuiRadioButton from './components/MuiRadioButton';
+import MuiCheckbox from './components/MuiCheckbox';
 
 function App() {
   return (
@@ -17,12 +18,15 @@ function App() {
         <button><Link to="/MuiTextField">MuiTextField</Link></button>&nbsp;&nbsp;
         <button><Link to="/MuiSelect">MuiSelect</Link></button>&nbsp;&nbsp;
         <button><Link to="/MuiRadioButton">MuiRadioButton</Link></button>&nbsp;&nbsp;
+        <button><Link to="/MuiCheckbox">MuiCheckbox</Link></button>&nbsp;&nbsp;
+
         <Routes>
           <Route path="/MuiTypography" element={<MuiTypography />} />
           <Route path="/MuiButton" element={<MuiButton />} />
           <Route path="/MuiTextField" element={<MuiTextField />} />
           <Route path="/MuiSelect" element={<MuiSelect />} />
           <Route path="/MuiRadioButton" element={<MuiRadioButton />} />
+          <Route path="/MuiCheckbox" element={<MuiCheckbox />} />
         </Routes>
       </BrowserRouter>
     </div>
