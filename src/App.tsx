@@ -4,6 +4,7 @@ import './App.css';
 import MuiTypography from './components/MuiTypography';
 import MuiButton from './components/MuiButton';
 import MuiTextField from './components/MuiTextField';
+import MuiSelect from './components/MuiSelect';
 
 function App() {
   return (
@@ -13,10 +14,12 @@ function App() {
         <button><Link to="/MuiTypography">MuiTypography</Link></button>&nbsp;&nbsp;
         <button><Link to="/MuiButton">MuiButton</Link></button>&nbsp;&nbsp;
         <button><Link to="/MuiTextField">MuiTextField</Link></button>&nbsp;&nbsp;
+        <button><Link to="/MuiSelect">MuiSelect</Link></button>&nbsp;&nbsp;
         <Routes>
           <Route path="/MuiTypography" element={<MuiTypography />} />
           <Route path="/MuiButton" element={<MuiButton />} />
           <Route path="/MuiTextField" element={<MuiTextField />} />
+          <Route path="/MuiSelect" element={<MuiSelect />} />
         </Routes>
       </BrowserRouter>
     </div>
