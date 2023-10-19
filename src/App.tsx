@@ -10,6 +10,7 @@ import MuiCheckbox from './components/MuiCheckbox';
 import MuiSwitch from './components/MuiSwitch';
 import MuiRating from './components/MuiRating';
 import MuiAutocomplete from './components/MuiAutocomplete';
+import MuiLayout from './components/MuiLayout';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <button><Link to="/MuiSwitch">MuiSwitch</Link></button>&nbsp;&nbsp;
         <button><Link to="/MuiRating">MuiRating</Link></button>&nbsp;&nbsp;
         <button><Link to="/MuiAutocomplete">MuiAutocomplete</Link></button>&nbsp;&nbsp;
+        <button><Link to="/MuiLayout">MuiLayout</Link></button>&nbsp;&nbsp;
 
         <Routes>
           <Route path="/MuiTypography" element={<MuiTypography />} />
@@ -36,6 +38,7 @@ function App() {
           <Route path="/MuiSwitch" element={<MuiSwitch />} />
           <Route path="/MuiRating" element={<MuiRating />} />
           <Route path="/MuiAutocomplete" element={<MuiAutocomplete />} />
+          <Route path="/MuiLayout" element={<MuiLayout />} />
         </Routes>
       </BrowserRouter>
     </div>
