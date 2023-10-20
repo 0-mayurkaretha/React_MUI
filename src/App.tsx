@@ -12,6 +12,7 @@ import MuiRating from './components/MuiRating';
 import MuiAutocomplete from './components/MuiAutocomplete';
 import MuiLayout from './components/MuiLayout';
 import MuiCard from './components/MuiCard';
+import MuiAccordian from './components/MuiAccordian';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         <button><Link to="/MuiAutocomplete">MuiAutocomplete</Link></button>&nbsp;&nbsp;
         <button><Link to="/MuiLayout">MuiLayout</Link></button>&nbsp;&nbsp;
         <button><Link to="/MuiCard">MuiCard</Link></button>&nbsp;&nbsp;
+        <button><Link to="/MuiAccordian">MuiAccordian</Link></button>&nbsp;&nbsp;
 
         <Routes>
           <Route path="/MuiTypography" element={<MuiTypography />} />
@@ -42,6 +44,7 @@ function App() {
           <Route path="/MuiAutocomplete" element={<MuiAutocomplete />} />
           <Route path="/MuiLayout" element={<MuiLayout />} />
           <Route path="/MuiCard" element={<MuiCard />} />
+          <Route path="/MuiAccordian" element={<MuiAccordian />} />
         </Routes>
       </BrowserRouter>
     </div>
