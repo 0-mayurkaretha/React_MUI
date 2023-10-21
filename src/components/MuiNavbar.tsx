@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Stack, AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem } from '@mui/material'
+import { Stack, AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Link } from '@mui/material'
 import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 
@@ -49,6 +49,13 @@ const MuiNavbar = () => {
           </Menu>
         </Toolbar>
       </AppBar>
+
+      <Stack spacing={2} direction='row' m={4}>
+        <Link href='#'>Link primary</Link>
+        <Link href='#' color='secondary'>Link secondary</Link>
+        <Link href='#' underline='hover'>Undeline hover</Link>
+        <Link href='#' underline='none'>Undeline none</Link>
+      </Stack>
     </div>
   )
 };
