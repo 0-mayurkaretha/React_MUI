@@ -1,9 +1,12 @@
 import React, { useState } from "react"
-import { Box, Stack, AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Link, Breadcrumbs, Drawer, fabClasses } from '@mui/material'
+import { Box, Stack, AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Link, Breadcrumbs, Drawer, SpeedDial, SpeedDialAction, SpeedDialIcon} from '@mui/material'
 import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import NavigateNextIcon from '@mui/icons-material/NavigateNext'
 import MenuIcon from '@mui/icons-material/Menu'
+import CopyIcon from '@mui/icons-material/FileCopyOutlined'
+import PrintIcon from '@mui/icons-material/Print'
+import ShareIcon from '@mui/icons-material/Share'
 
 const MuiNavbar = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
@@ -82,6 +85,12 @@ const MuiNavbar = () => {
           </Typography>
         </Box>
       </Drawer>
+
+      <SpeedDial ariaLabel='Navigation speed dial' sx={{ position: 'absolute', bottom: 16, right: 16}} icon={<SpeedDialIcon />}>
+        <SpeedDialAction icon={<CopyIcon />} tooltipTitle='Copy' />
+        <SpeedDialAction icon={<PrintIcon />} tooltipTitle='Print' />
+        <SpeedDialAction icon={<ShareIcon />} tooltipTitle='Share' />
+      </SpeedDial>
 
     </div>
   )
