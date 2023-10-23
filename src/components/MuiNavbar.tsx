@@ -1,8 +1,9 @@
 import React, { useState } from "react"
-import { Box, Stack, AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Link, Breadcrumbs } from '@mui/material'
+import { Box, Stack, AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Link, Breadcrumbs, Drawer, fabClasses } from '@mui/material'
 import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import NavigateNextIcon from '@mui/icons-material/NavigateNext'
+import MenuIcon from '@mui/icons-material/Menu'
 
 const MuiNavbar = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
@@ -14,6 +15,8 @@ const MuiNavbar = () => {
   const handleClose = () => {
     setAnchorEl(null)
   }
+
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
   return (
     <div style={{paddingTop:"32px"}}>
@@ -34,6 +37,9 @@ const MuiNavbar = () => {
             <Button color='inherit'>About</Button>
             <Button color='inherit' id='resouces-button' onClick={handleClick} aria-control={open ? 'resources-menu' : undefined} aria-haspopup='true' aria-expanded={open ? 'true' : undefined} endIcon={<KeyboardArrowDownIcon />}>Resources</Button>
             <Button color='inherit'>Login</Button>
+            <IconButton size='large' edge='start' color='inherit' aria-label='logo' onClick={() => setIsDrawerOpen(true)}>
+              <MenuIcon />
+            </IconButton>
           </Stack>
 
           <Menu 
@@ -51,6 +57,7 @@ const MuiNavbar = () => {
         </Toolbar>
       </AppBar>
 
+      <br/>
       <Stack spacing={2} direction='row' m={4}>
         <Link href='#'>Link primary</Link>
         <Link href='#' color='secondary'>Link secondary</Link>
@@ -67,6 +74,15 @@ const MuiNavbar = () => {
           <Typography color='text.primary'>Shoes</Typography>
         </Breadcrumbs>
       </Box> 
+    
+      <Drawer anchor='left' open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)}>
+        <Box p={2} width='256px' textAlign='center' role='presentation'>
+          <Typography variant='h6' component='div'>
+            Side panel
+          </Typography>
+        </Box>
+      </Drawer>
+
     </div>
   )
 };
