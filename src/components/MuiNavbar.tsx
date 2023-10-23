@@ -1,7 +1,8 @@
 import React, { useState } from "react"
-import { Stack, AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Link } from '@mui/material'
+import { Box, Stack, AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Link, Breadcrumbs } from '@mui/material'
 import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
+import NavigateNextIcon from '@mui/icons-material/NavigateNext'
 
 const MuiNavbar = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
@@ -56,6 +57,16 @@ const MuiNavbar = () => {
         <Link href='#' underline='hover'>Undeline hover</Link>
         <Link href='#' underline='none'>Undeline none</Link>
       </Stack>
+
+      <br/>
+      <Box m={4}>
+        <Breadcrumbs aria-label='breadcrumbs' separator={<NavigateNextIcon fontSize='small' />}>
+          <Link underline='hover' href='#'>Home</Link>
+          <Link underline='hover' href='#'>Catalog</Link>
+          <Link underline='hover' href='#'>Accessories</Link>
+          <Typography color='text.primary'>Shoes</Typography>
+        </Breadcrumbs>
+      </Box> 
     </div>
   )
 };
