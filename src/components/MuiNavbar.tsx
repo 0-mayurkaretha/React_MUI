@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Box, Stack, AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Link, Breadcrumbs, Drawer, SpeedDial, SpeedDialAction, SpeedDialIcon} from '@mui/material'
+import { Box, Stack, AppBar, Toolbar, IconButton, Typography, Button, Menu, MenuItem, Link, Breadcrumbs, Drawer, SpeedDial, SpeedDialAction, SpeedDialIcon, BottomNavigation, BottomNavigationAction} from '@mui/material'
 import CatchingPokemonIcon from '@mui/icons-material/CatchingPokemon'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 import NavigateNextIcon from '@mui/icons-material/NavigateNext'
@@ -7,6 +7,9 @@ import MenuIcon from '@mui/icons-material/Menu'
 import CopyIcon from '@mui/icons-material/FileCopyOutlined'
 import PrintIcon from '@mui/icons-material/Print'
 import ShareIcon from '@mui/icons-material/Share'
+import HomeIcon from '@mui/icons-material/Home'
+import FavoriteIcon from '@mui/icons-material/Favorite'
+import PersonIcon from '@mui/icons-material/Person'
 
 const MuiNavbar = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
@@ -92,6 +95,12 @@ const MuiNavbar = () => {
         <SpeedDialAction icon={<ShareIcon />} tooltipTitle='Share' />
       </SpeedDial>
 
+      {/* for mobile and tablet devices */}
+      <BottomNavigation sx={{ width: '25%', position: 'absolute', bottom: 0}} showLabels>
+        <BottomNavigationAction label='Home' icon={<HomeIcon />} />
+        <BottomNavigationAction label='Favorites' icon={<FavoriteIcon />} />
+        <BottomNavigationAction label='Profile' icon={<PersonIcon />} />
+      </BottomNavigation>
     </div>
   )
 };
