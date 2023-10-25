@@ -1,5 +1,5 @@
 import React, {useState, forwardRef} from "react"
-import { Snackbar, Button, Alert, AlertProps } from '@mui/material'
+import { Snackbar, Button, Alert, AlertProps, Dialog, DialogTitle, DialogActions, DialogContent, DialogContentText } from '@mui/material'
 
 const SnackbarAlert = forwardRef<HTMLDivElement, AlertProps>(
   function SnackbarAlert(props, ref) {
@@ -8,6 +8,7 @@ const SnackbarAlert = forwardRef<HTMLDivElement, AlertProps>(
 )
 
 const MuiFeedbackComponents = () => {
+  //for Snackbar
   const [open, setOpen] = useState(false)
   const [open2, setOpen2] = useState(false)
 
@@ -25,6 +26,10 @@ const MuiFeedbackComponents = () => {
     setOpen(false)
   }
 
+  //for Dialog
+  const [dialogOpen, setDialogOpen] = useState(false)
+  
+
   return (
     <div style={{paddingTop:"32px"}}>
       
@@ -40,6 +45,21 @@ const MuiFeedbackComponents = () => {
         </SnackbarAlert>
       </Snackbar>
 
+      <br/><br/><br/>
+      Dialog: <br/><br/>
+
+      <Button variant='outlined' onClick={() => setDialogOpen(true)}>Opne dialog</Button>
+
+      <Dialog aria-labelledby='dialog-title' aria-describedby='dialog-description' open={dialogOpen} onClose={() => setDialogOpen(false)}>
+        <DialogTitle id='dialog-title'>Submit the test?</DialogTitle>
+        <DialogContent>
+          <DialogContentText id='dialog-description'>Are you sure you want to? You will not be able to edit after submitting</DialogContentText>
+          <DialogActions>
+            <Button onClick={() => setDialogOpen(false)}>Cancel</Button>
+            <Button autoFocus onClick={() => setDialogOpen(false)}>Submit</Button>
+          </DialogActions>
+        </DialogContent>
+      </Dialog>
     </div>
   )
 };
