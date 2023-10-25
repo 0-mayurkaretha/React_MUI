@@ -16,6 +16,7 @@ import MuiAccordian from './components/MuiAccordian';
 import MuiImageList from './components/MuiImageList';
 import MuiNavbar from './components/MuiNavbar';
 import MuiDataDisplay from './components/MuiDataDisplay';
+import MuiAlert from './components/MuiAlert';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
         <button><Link to="/MuiImageList">MuiImageList</Link></button>&nbsp;&nbsp;
         <button><Link to="/MuiNavbar">MuiNavbar</Link></button>&nbsp;&nbsp;
         <button><Link to="/MuiDataDisplay">MuiDataDisplay</Link></button>&nbsp;&nbsp;
+        <button><Link to="/MuiAlert">MuiAlert</Link></button>&nbsp;&nbsp;
 
         <Routes>
           <Route path="/MuiTypography" element={<MuiTypography />} />
@@ -54,6 +56,7 @@ function App() {
           <Route path="/MuiImageList" element={<MuiImageList />} />
           <Route path="/MuiNavbar" element={<MuiNavbar />} />
           <Route path="/MuiDataDisplay" element={<MuiDataDisplay />} />
+          <Route path="/MuiAlert" element={<MuiAlert />} />
         </Routes>
       </BrowserRouter>
     </div>
