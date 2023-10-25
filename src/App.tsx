@@ -17,6 +17,7 @@ import MuiImageList from './components/MuiImageList';
 import MuiNavbar from './components/MuiNavbar';
 import MuiDataDisplay from './components/MuiDataDisplay';
 import MuiAlert from './components/MuiAlert';
+import MuiFeedbackComponents from './components/MuiFeedbackComponents';
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
         <button><Link to="/MuiNavbar">MuiNavbar</Link></button>&nbsp;&nbsp;
         <button><Link to="/MuiDataDisplay">MuiDataDisplay</Link></button>&nbsp;&nbsp;
         <button><Link to="/MuiAlert">MuiAlert</Link></button>&nbsp;&nbsp;
+        <button><Link to="/MuiFeedbackComponents">MuiFeedbackComponents</Link></button>&nbsp;&nbsp;
 
         <Routes>
           <Route path="/MuiTypography" element={<MuiTypography />} />
@@ -57,6 +59,7 @@ function App() {
           <Route path="/MuiNavbar" element={<MuiNavbar />} />
           <Route path="/MuiDataDisplay" element={<MuiDataDisplay />} />
           <Route path="/MuiAlert" element={<MuiAlert />} />
+          <Route path="/MuiFeedbackComponents" element={<MuiFeedbackComponents />} />
         </Routes>
       </BrowserRouter>
     </div>
