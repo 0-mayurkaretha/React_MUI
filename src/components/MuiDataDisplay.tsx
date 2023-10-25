@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import { Box, Stack, Avatar, AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar, ListItemButton, Divider, Chip } from '@mui/material'
+import { Box, Stack, Avatar, AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar, ListItemButton, Divider, Chip, Table, TableContainer, TableHead, TableBody, TableRow, TableCell, Paper } from '@mui/material'
 import MailIcon from '@mui/icons-material/Mail'
 import FaceIcon from '@mui/icons-material/Face'
 
@@ -115,9 +115,108 @@ const MuiDataDisplay = () => {
           ))
         }
       </Stack>
+      
+      <br/><br/><br/>
+      Table: <br/><br/>
+      <TableContainer component={Paper} sx={{ maxHeight: '300px'}}>
+        <Table aria-label='simple table' stickyHeader>
+          <TableHead>
+            <TableRow>
+              <TableCell>ID</TableCell>
+              <TableCell>First name</TableCell>
+              <TableCell>Last name</TableCell>
+              <TableCell>Email</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {
+              tableData.map(row => (
+                <TableRow key={row.id} sx={{ '&:last-child td, &:last-child th': { border: 0}}}>
+                  <TableCell>{row.id}</TableCell>
+                  <TableCell>{row.first_name}</TableCell>
+                  <TableCell>{row.last_name}</TableCell>
+                  <TableCell>{row.email}</TableCell>
+                </TableRow>
+              ))
+            }
+          </TableBody>
+        </Table>
+      </TableContainer>
  
     </div>
   )
 };
 
 export default MuiDataDisplay;
+
+const tableData = [{
+  "id": 1,
+  "first_name": "Tobi",
+  "last_name": "Stack",
+  "email": "tstack0@icio.us",
+  "gender": "Female",
+  "ip_address": "199.213.16.247"
+}, {
+  "id": 2,
+  "first_name": "Sarina",
+  "last_name": "Borrow",
+  "email": "sborrow1@flickr.com",
+  "gender": "Female",
+  "ip_address": "236.25.118.134"
+}, {
+  "id": 3,
+  "first_name": "Lydon",
+  "last_name": "Beere",
+  "email": "lbeere2@sina.com.cn",
+  "gender": "Male",
+  "ip_address": "61.129.86.147"
+}, {
+  "id": 4,
+  "first_name": "Foster",
+  "last_name": "McCart",
+  "email": "fmccart3@illinois.edu",
+  "gender": "Male",
+  "ip_address": "162.175.147.68"
+}, {
+  "id": 5,
+  "first_name": "Maximilian",
+  "last_name": "Callendar",
+  "email": "mcallendar4@time.com",
+  "gender": "Male",
+  "ip_address": "46.82.144.57"
+}, {
+  "id": 6,
+  "first_name": "Theresina",
+  "last_name": "Lambin",
+  "email": "tlambin5@soundcloud.com",
+  "gender": "Female",
+  "ip_address": "202.48.89.71"
+}, {
+  "id": 7,
+  "first_name": "Franny",
+  "last_name": "Netti",
+  "email": "fnetti6@census.gov",
+  "gender": "Female",
+  "ip_address": "90.27.54.170"
+}, {
+  "id": 8,
+  "first_name": "Rudie",
+  "last_name": "Tal",
+  "email": "rtal7@com.com",
+  "gender": "Male",
+  "ip_address": "152.192.84.190"
+}, {
+  "id": 9,
+  "first_name": "Farrell",
+  "last_name": "Cumberpatch",
+  "email": "fcumberpatch8@mapy.cz",
+  "gender": "Male",
+  "ip_address": "37.107.42.20"
+}, {
+  "id": 10,
+  "first_name": "Stephen",
+  "last_name": "Aksell",
+  "email": "saksell9@sciencedirect.com",
+  "gender": "Male",
+  "ip_address": "90.216.186.207"
+}]
