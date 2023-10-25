@@ -1,5 +1,5 @@
 import React, {useState, forwardRef} from "react"
-import { Snackbar, Button, Alert, AlertProps, Dialog, DialogTitle, DialogActions, DialogContent, DialogContentText } from '@mui/material'
+import { Stack, Snackbar, Button, Alert, AlertProps, Dialog, DialogTitle, DialogActions, DialogContent, DialogContentText, CircularProgress, LinearProgress } from '@mui/material'
 
 const SnackbarAlert = forwardRef<HTMLDivElement, AlertProps>(
   function SnackbarAlert(props, ref) {
@@ -60,6 +60,19 @@ const MuiFeedbackComponents = () => {
           </DialogActions>
         </DialogContent>
       </Dialog>
+
+      <br/><br/><br/>
+      Progress: <br/><br/>
+      <Stack spacing={2}>
+        <CircularProgress />
+        <CircularProgress color='success' />
+        <CircularProgress variant='determinate' value={60} />
+
+        <LinearProgress />
+        <LinearProgress color='success' />
+        <LinearProgress variant='determinate' value={60} />
+      </Stack>
+      
     </div>
   )
 };
