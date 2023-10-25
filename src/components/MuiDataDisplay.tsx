@@ -1,8 +1,14 @@
-import React from "react"
-import { Box, Stack, Avatar, AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar, ListItemButton, Divider } from '@mui/material'
+import React, { useState } from "react"
+import { Box, Stack, Avatar, AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar, ListItemButton, Divider, Chip } from '@mui/material'
 import MailIcon from '@mui/icons-material/Mail'
+import FaceIcon from '@mui/icons-material/Face'
 
 const MuiDataDisplay = () => {
+  const [chips, setChips] = useState(['chip 1', 'chip 2', 'chip 3'])
+  const handleDelete = (chipToDelete: string) => {
+    setChips(chips => chips.filter((chip) => chip!== chipToDelete))
+  }
+
   return (
     <div style={{paddingTop:"32px"}}>
       
@@ -91,6 +97,25 @@ const MuiDataDisplay = () => {
 
         </List>
       </Box>
+
+      <br/><br/><br/>
+      Chip: <br/><br/>
+      <Stack direction='row' spacing={1}>
+        <Chip label='Chip' />
+        <Chip label='Chip' color='primary' />
+        <Chip label='Chip outlined' color='primary' variant='outlined' />
+        <Chip label='Chip avatar' color='primary' variant='outlined' avatar={<Avatar>V</Avatar>} />
+        <Chip label='Chip icon' color='primary' icon={<FaceIcon />} />
+        <Chip label='Click' color='success' onClick={() => alert('clicked!')} />
+        <Chip label='Delete' color='error' onClick={() => alert('clicked!')} onDelete={() => alert('Delete handler called')} />
+        {
+          
+          chips.map( chip => (
+            <Chip key={chip} label={chip} onDelete={() => handleDelete(chip)} />
+          ))
+        }
+      </Stack>
+ 
     </div>
   )
 };
