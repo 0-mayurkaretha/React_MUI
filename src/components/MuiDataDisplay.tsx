@@ -1,5 +1,5 @@
 import React from "react"
-import { Stack, Avatar, AvatarGroup, Badge } from '@mui/material'
+import { Box, Stack, Avatar, AvatarGroup, Badge, List, ListItem, ListItemText, ListItemIcon, ListItemAvatar, ListItemButton, Divider } from '@mui/material'
 import MailIcon from '@mui/icons-material/Mail'
 
 const MuiDataDisplay = () => {
@@ -44,6 +44,53 @@ const MuiDataDisplay = () => {
           <MailIcon />
         </Badge>
       </Stack>
+
+      <br/><br/><br/>
+      List: <br/><br/>
+      <Box sx={{ width: '400px', bgcolor: '#efefef'}}>
+        <List>
+
+          <ListItem disablePadding>
+              <ListItemButton>
+                <ListItemIcon>
+                  <ListItemAvatar>
+                    <Avatar>
+                      <MailIcon />
+                    </Avatar>
+                  </ListItemAvatar>
+                </ListItemIcon>
+              <ListItemText primary='List Item 1' secondary='Secondary text' />
+            </ListItemButton>
+          </ListItem>
+          <Divider />
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <ListItemAvatar>
+                  <Avatar>
+                    <MailIcon />
+                  </Avatar>
+                </ListItemAvatar>
+              </ListItemIcon>
+              <ListItemText primary='List Item 2' secondary='Secondary text' />
+            </ListItemButton>
+          </ListItem>
+          <Divider />
+          <ListItem disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <ListItemAvatar>
+                  <Avatar>
+                    <MailIcon />
+                  </Avatar>
+                </ListItemAvatar>
+              </ListItemIcon>
+              <ListItemText primary='List Item 3' secondary='Secondary text' />
+            </ListItemButton>
+          </ListItem>
+
+        </List>
+      </Box>
     </div>
   )
 };
